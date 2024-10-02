@@ -1,0 +1,27 @@
+<!--divisa.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-white">Calculadora de divisas</h1>
+    <p class="text-white">Ingresa datos numericos ...</p>
+    <form action="/divisa" method="POST">         <!-- Cambiado de "/" a "/divisa" -->
+        <div class="row">
+            <div class="col-md-6">
+                <input type="number" class="form-control" name="monedausa" placeholder="Ingresa la cantidad de dolares que quieres convertir..." aria-label="Ingresa el primer numero">
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-outline-info">Calcular</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row py-2">
+        <div class="col">
+            <h3 class="text-white">moneda colombiana: {{col}}</h3>
+            <h3 class="text-white">moneda argentina: {{arg}}</h3>
+            <h3 class="text-white">moneda europea: {{euro}}</h3>
+        </div>
+    </div>
+{% endblock %}
