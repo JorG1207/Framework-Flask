@@ -1,3 +1,4 @@
+from app import app
 from flask import render_template, request, flash, redirect, url_for, session
 from app.config import connectionBD
 from werkzeug.security import check_password_hash
